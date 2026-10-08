@@ -7,6 +7,8 @@ services:
       - "8000:8000"
     volumes:
       - ./app:/app/app
+      - ./migrations:/app/migrations
+      - ./alembic.ini:/app/alembic.ini
     environment:
       DATABASE_URL: postgresql+psycopg://pulse:pulse@db:5432/pulse
       REDIS_URL: redis://redis:6379/0
